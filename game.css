@@ -1,0 +1,178 @@
+.container {
+    width: 10px;
+    margin: 0 auto;
+}
+
+ul {                                /* deck position and sizing css */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 95%;
+    width: 95%;
+    justify-content: center;
+    padding: 0;
+
+  }
+  
+  li {                          /* cards position and sizing css */
+    list-style-type: none;
+    margin: 5px;
+    width: 15%;
+    flex-basis: 21%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    perspective: 500px;
+    cursor: pointer;
+    height: 20%
+   
+  }
+
+  li:hover {                            /* to scale cards larger when hovered and border */
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1.1);  }
+  
+  .pete-1 {                                     /* each cards comparison photo */
+    background-image: url(petepics/pete1.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center;   
+  }
+  
+  .pete-2 {
+    background-image: url(petepics/pete2.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center;   
+  }
+  
+  .pete-3 {
+    background-image: url(petepics/pete3.png);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center; 
+  }
+  
+  .pete-4 {
+    background-image: url(petepics/pete4.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center; 
+  }
+  
+  .pete-5 {
+    background-image: url(petepics/pete5.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center; 
+  }
+  
+  .pete-6 {
+    background-image: url(petepics/pete6.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center; 
+  }
+  
+  .pete-7 {
+    background-image: url(petepics/pete7.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center; 
+  }
+  
+  .pete-8 {
+    background-image: url(petepics/pete8.jpg);
+    background-size:     cover;          
+    background-repeat:   no-repeat;
+    background-position: center center; 
+  }
+  
+/*   
+  .blank {
+    background-size: 75px 75px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  } */
+
+  .face-down {                                      /* card backs */
+    background-color: black;
+    background-image: url(petepics/nick.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }  
+  .card.open {                              /* animation to open the card */
+	transform: rotateY(0);
+	cursor: default;
+    animation-name: flipInY;
+	backface-visibility: visible;
+    animation-duration: .85s;
+}
+    /* .card.close {
+    transform: rotateY(0);
+    cursor: default;
+    animation-name: flipClose;
+    backface-visibility: visible;
+    animation-duration: .85s;
+    } */
+
+@keyframes flipInY {                                                /* animation to open card using css transform rotations and different degrees */
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(1, 1, 1, 0deg);
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+	}
+
+	to {
+        transform: perspective(400px);
+	}
+}
+
+/* @keyframes flipClose {
+    from {
+        transform: perspective(400px);
+        animation-timing-function: ease-out;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+        animation-timing-function: ease-out;
+    }
+
+    60% {
+    transform: perspective(400px) rotate3d(1, 1, 1, 0deg);
+    }
+
+    80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+    }
+    to {
+    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+    }
+} */
+
+@keyframes grow {                                   /* where the scaling of the card is set */
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(5);
+    }
+}
+
+ul {
+    display: 
+}
