@@ -1,14 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-<<<<<<< HEAD
     min-width: 309px;
     background-color: lightgrey;
     max-width: 616px;
-=======
-    min-width: 370px;
-    background-color: lightgrey;
->>>>>>> b87fd393ac5c15a416c9d2f442b66671a2098ec0
 }
 main {
     display: flex;
@@ -20,6 +15,7 @@ main {
     background: lightblue;
     margin: 10px;
     flex-basis: 17%;
+    opacity: 0;
 }
 .container {
     width: 90%;
@@ -67,10 +63,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-=======
-
->>>>>>> b87fd393ac5c15a416c9d2f442b66671a2098ec0
 }
 h5 {
     margin: 0;
