@@ -4,6 +4,7 @@ $(document).ready(function () {
     var time = 0;
     $(`.power`).click(function(){
         $(`.screen`).toggleClass(`unclicked`);
+        $(`.card`).toggleClass(`onoff`);
           time = 120;
           showTimer();
             // if $(“.screen”).toggleClass(“clicked”)
