@@ -5,12 +5,12 @@ $(document).ready(function () {
     $(`.power`).click(function(){
         console.log('hello!')
         $(`.screen`).toggleClass(`unclicked`);
+        $(`.card`).toggleClass(`onoff`);
           time = 120;
           showTimer();
             // if $(“.screen”).toggleClass(“clicked”)
           clearInterval(timer);
         //   **** Adam clearInterval needs to be above timer =setInterval(...)
-        $(".cards").css("opacity", "1");
           timer = setInterval(showTimer, 1000);
         });
         let matches = 0;                                // number of matches between the cards starts at 0
