@@ -9,7 +9,7 @@ $(document).ready(function () {
       location.reload();
     }
     $(`.card`).toggleClass(`onoff`);
-    time = 5;
+    time = 120;
     showTimer();
     // if $(“.screen”).toggleClass(“clicked”)
     clearInterval(timer);
@@ -18,12 +18,6 @@ $(document).ready(function () {
     StartMemGame();
   });
   $('.reset').click(function () {
-    time = 5;
-    showTimer();
-    // if $(“.screen”).toggleClass(“clicked”)
-    clearInterval(timer);
-    //   **** Adam clearInterval needs to be above timer =setInterval(...)
-    timer = setInterval(showTimer, 1000);
     location.reload();
   })
   let matches = 0;                                // number of matches between the cards starts at 0
@@ -72,7 +66,7 @@ $(document).ready(function () {
       }
 
       const checkWin = () => {
-        if (matches === 1) {
+        if (matches === 8) {
           console.log(`you win!`);
           // $('.container').html('<h1>You win!</h1>');
           console.log(time);
@@ -91,6 +85,9 @@ $(document).ready(function () {
     if (time < 0) {
       clearInterval(timer);
       return;
+    }
+    else if (time == 0 && matches < 8) {
+      console.log(`you lose`)
     }
     function pad(value) {
       return (value < 10 ? `0` : ``) + value;

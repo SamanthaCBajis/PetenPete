@@ -70,8 +70,8 @@ h5 {
 .powerlabel{
     position: absolute;
     transform: rotate(-90deg);
-    left: 60px;
-    top: 5px;
+    left: 53px;
+    top: 7px;
     color: darkblue;
 }
 .resetlabel {
@@ -129,7 +129,9 @@ h5 {
     background: url('');
     background-color: darkolivegreen;
 }
-
+.powerinner, .resetinner {
+    display: none;
+}
 
 /* Desktop */
 
@@ -230,5 +232,8 @@ h5 {
     }
     .resetlabel {
         display: none;
+    }
+    .powerinner, .resetinner {
+        display: flex;
     }
 }
