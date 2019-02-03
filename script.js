@@ -9,7 +9,7 @@ $(document).ready(function () {
       location.reload();
     }
     $(`.card`).toggleClass(`onoff`);
-    time = 5;
+    time = 120;
     showTimer();
     // if $(“.screen”).toggleClass(“clicked”)
     clearInterval(timer);
@@ -18,8 +18,8 @@ $(document).ready(function () {
     StartMemGame();
   });
   $('.reset').click(function () {
-    time = 5;
-    showTimer();
+    // time = 120;
+    // showTimer();
     // if $(“.screen”).toggleClass(“clicked”)
     clearInterval(timer);
     //   **** Adam clearInterval needs to be above timer =setInterval(...)
@@ -47,7 +47,7 @@ $(document).ready(function () {
     $(document.body).on("click", "li.card", function (event) {         // This function happens in the document (HTMLs) body and attaches the on click event to each listed card 
 
 
-      $(event.target).toggleClass("face-down show open");             // the event (which is the click) is targeted by the toggle class function to flip over the card starting from the face-down class
+      $(event.target).toggleClass("facedDown show open");             // the event (which is the click) is targeted by the toggle class function to flip over the card starting from the face-down class
       clickedCard = $(event.target).attr("class");                    // the clicked card is set equal to the on click event and uses the .attr method to return it to the FIRST matched class attribute
       showCards.push(clickedCard);                                    // adding the clicked cards to the end of the array(show cards) when clicked and flipped back over
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
             matches++;                                                                  // the showCards array will reset and the matches will increment by 1 pair
             checkWin();
           } else {
-            $('.show').toggleClass("face-down show open");
+            $('.show').toggleClass("facedDown show open");
 
             showCards = [];
           }
