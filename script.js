@@ -14,7 +14,7 @@ $(document).ready(function () {
       location.reload();
     }
     $(`.card`).toggleClass(`onoff`);
-    time = 1;
+    time = 120;
     showTimer();
     clearInterval(timer);
     timer = setInterval(showTimer, 1000);
