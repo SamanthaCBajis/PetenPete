@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("ul").css({ 'display': 'none' })
   $(`.power`).click(function () {
     $("ul").css({ 'display': 'flex' })
-    var audio = new Audio('Theme.mp3');
+    let audio = new Audio('Theme.mp3');
     audio.play();
     console.log('hello!')
     $(`.screen`).toggleClass(`unclicked`);
