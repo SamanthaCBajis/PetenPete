@@ -24,7 +24,6 @@ $(document).ready(function () {
     location.reload();
   })
   let matches = 0;                                // number of matches between the cards starts at 0
-  let timetocomplete = 120 - time;
   function StartMemGame() {
 
     // Shuffles cards**************************
@@ -102,7 +101,7 @@ $(document).ready(function () {
   function youWin() {
     console.log(`you win!`);
     $(".modal").toggle(function (e) {    // toggles on the victory modal
-      $(".modal-header").append(`<h1>You Won! Now begins the Age of Pete! Your completion time was: ${timetocomplete} seconds.</h1>`);
+      $(".modal-header").append(`<h1>You Won! Now begins the Age of Pete! Your completion time was: ${120 - time} seconds.</h1>`);
       const victory = `"${getRandomWord()}"`
       $(".victory-msg").append(victory);
       // e.preventDefault();
