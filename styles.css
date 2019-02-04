@@ -52,20 +52,26 @@ main {
 .onoff {
     opacity: 0;
 }
+@font-face {
+    font-family: NintendoBold;
+    src: url(NintendBold.otf);
+}
 h5 {
+    font-family: NintendoBold;
     margin: 0;
     margin-top: 6px;
     color: darkblue;
     width: 90%;
     font-size: 1.1em;
-    font-family: Arial, Helvetica, sans-serif
 }
 .buttongroup {
     display: flex;
     align-items: center;
     width: 90%;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 50px;
+    margin-left: 70px;
+    margin-right:70px;
 } 
 .powerlabel{
     position: absolute;
@@ -88,6 +94,7 @@ h5 {
     background-color: rgb(190, 190, 190);
     border-radius: 5em 5em 5em 5em;;
     transform: rotate(45deg);
+    margin-right: 30px;
 }
 
 .power, .reset {
@@ -103,6 +110,10 @@ h5 {
 .power {
     margin-bottom: 10px;
 }
+@font-face{
+    font-family: digital-clock-font;
+    src: url(digital-7.ttf);
+   }
 .timer {
     width: 100px;
     height: 100px;
@@ -111,6 +122,8 @@ h5 {
     -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75), inset 0px 0px 8px 1px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75), inset 0px 0px 8px 1px rgba(255,255,255,1);
     box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75), inset 0px 0px 8px 1px rgba(255,255,255,1);
+    font-family: digital-clock-font;
+    font-size: 2em;
 }
 .power, .reset {
     display: flex;
@@ -162,13 +175,14 @@ h5 {
 
 .modal-header {
     padding: 10px 10px;
-    background: #2073df;
+    background: #EC4417;
     color: #ffffff;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     font-size: 12px;
     display: flex;
     align-items: center;
+    border-radius: 20px 20px 0 0;
 }
 .modalpic {
     width: 100px;
@@ -179,6 +193,7 @@ h5 {
     background-size: cover;
     background-image: url(petepics/surprisedpete.jpg);
     margin: 10px;
+    border-radius: 5px;
 }
 
 h1 {
@@ -188,11 +203,12 @@ h1 {
 }
 
 .modal-body {
-    background: rgb(181, 228, 225);
+    background: #5AEC08;
     padding: 20px 20px;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
+    border-radius: 0 0 20px 20px;
 }
 
 .victory-msg {
@@ -201,7 +217,7 @@ h1 {
     padding-top: 0;
 }
 .playagain {
-    text-align: center;
+    font-size: 1.5em;
 }
 
 .modal_btn {
@@ -215,7 +231,10 @@ h1 {
     width: 25%;
     cursor: pointer;
     border: none;
-    background-color: orange;
+    background-color: white;
+    height: 30px;
+    font-size: 1.5em;
+    border-radius: 5px;
 }
 
 /* Modal PowerOff button */
@@ -315,6 +334,7 @@ h1 {
         background-color: #C8C1AE;
         border-radius: 5em 5em 5em 5em;;
         transform: rotate(0deg);
+        margin-right: 0px;
     }
     
     .power, .reset {
