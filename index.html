@@ -9,6 +9,24 @@
     <title>Remember Pete and Pete?</title>
 </head>
 <body>
+    <div class="modal" id="modal-name">
+        <!-- <div class="modal-sandbox"></div> Not sure what this is doing -->
+        <div class="modal-box">
+            <div class="modal-header">
+                <!-- <div class="close-modal">&#10006;</div>  The X button in the header-->
+                <h1></h1>
+            </div>
+            <div class="modal-body">
+                <p class="victory-msg"></p>
+                <p>Do you want to play again?</p>
+                <br />
+                <div class="modal_btn">
+                    <button class="reset-modal">Reset</button>
+                    <!-- <button class="poweroff-modal">Power Off</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- game-border is the main section that encompasses the entire page including the controls on game boy and TV-->
     <div class="game-border">
         <!-- screen border is the border that contains the screeninfo containt and the screen image on both game boy and TV-->
@@ -18,22 +36,22 @@
                 <!-- screen is the screen image (green on gameboy and fuzz on TV-->
                 <div class="screen unclicked">
                     <ul class="petenpete-deck" id="deckOfCards">         <!-- class and id name for ul (aka deck) -->
-                        <li id="card1" class="onoff card face-down pete-1"></li>  <!-- classes and id names for individual cards -->
-                        <li id="card2" class="onoff card face-down pete-1"></li>
-                        <li id="card3" class="onoff card face-down pete-2"></li>
-                        <li id="card4" class="onoff card face-down pete-2"></li>
-                        <li id="card5" class="onoff card face-down pete-3"></li>
-                        <li id="card6" class="onoff card face-down pete-3"></li>
-                        <li id="card7" class="onoff card face-down pete-4"></li>
-                        <li id="card8" class="onoff card face-down pete-4"></li>
-                        <li id="card9" class="onoff card face-down pete-5"></li>
-                        <li id="card10" class="onoff card face-down pete-5"></li>
-                        <li id="card11" class="onoff card face-down pete-6"></li>
-                        <li id="card12" class="onoff card face-down pete-6"></li>
-                        <li id="card13" class="onoff card face-down pete-7"></li>
-                        <li id="card14" class="onoff card face-down pete-7"></li>
-                        <li id="card15" class="onoff card face-down pete-8"></li>
-                        <li id="card16" class="onoff card face-down pete-8"></li>
+                        <li id="card1" class="onoff card facedDown pete-1"></li>  <!-- classes and id names for individual cards -->
+                        <li id="card2" class="onoff card facedDown pete-1"></li>
+                        <li id="card3" class="onoff card facedDown pete-2"></li>
+                        <li id="card4" class="onoff card facedDown pete-2"></li>
+                        <li id="card5" class="onoff card facedDown pete-3"></li>
+                        <li id="card6" class="onoff card facedDown pete-3"></li>
+                        <li id="card7" class="onoff card facedDown pete-4"></li>
+                        <li id="card8" class="onoff card facedDown pete-4"></li>
+                        <li id="card9" class="onoff card facedDown pete-5"></li>
+                        <li id="card10" class="onoff card facedDown pete-5"></li>
+                        <li id="card11" class="onoff card facedDown pete-6"></li>
+                        <li id="card12" class="onoff card facedDown pete-6"></li>
+                        <li id="card13" class="onoff card facedDown pete-7"></li>
+                        <li id="card14" class="onoff card facedDown pete-7"></li>
+                        <li id="card15" class="onoff card facedDown pete-8"></li>
+                        <li id="card16" class="onoff card facedDown pete-8"></li>
                       </ul>
                 </div>
                 <!-- logo is a container that can possible contatin a logo or information if needed, and possibly the TV logo (need to make some changes for this to work on the TV) -->

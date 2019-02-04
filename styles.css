@@ -128,10 +128,112 @@ h5 {
 .unclicked {
     background: url('');
     background-color: darkolivegreen;
+    display: flex;
+    justify-content: center;
+}
+/* Modal Styling */
+.modal, .modal-box {
+    z-index: 900;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .8);
+    overflow: auto;
+}
+
+.modal-box {
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    margin: 100px auto;
+    animation-name: modalbox;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(0, 0, .3, 1.6);
+}
+
+.modal-header {
+    padding: 10px 10px;
+    background: #2073df;
+    color: #ffffff;
+    border-radius: 20px 20px 0 0;
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMTg3OTA3MjcxNl5BMl5BanBnXkFtZTcwNzExMjkxNA@@._V1_UX100_CR0,0,100,100_AL_.jpg);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    /* background-attachment: fixed; */
+    background-position: right;
+    font-size: 12px;
+}
+
+h1 {
+    width: 60%;    
+}
+
+.modal-body {
+    background: rgb(181, 228, 225);
+    padding: 20px 20px;
+    font-size: 12px;
+    border-radius: 0 0 20px 20px;
+    font-weight: bold;
+}
+
+.victory-msg {
+    font-style: italic;    
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.modal_btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Modal Reset button*/
+.reset-modal {
+    width: 25%;
+    cursor: pointer;
+    border: none;
+    background-color: orange;
+}
+
+/* Modal PowerOff button */
+/* .poweroff-modal {
+    width: 25%;
+    cursor: pointer;
+    border: none;
+    background-color: red;
+} */
+/* modal styling ends */
+
+@font-face {
+    font-family: NintendoBold;
+    src: url(NintendBold.otf);
+}
+
+.unclicked:before {
+    content: 'Press Power';
+    font-family: NintendoBold;
+    color: black;
+    white-space: nowrap;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 28px;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .powerinner, .resetinner {
     display: none;
 }
+
 
 /* Desktop */
 
@@ -226,6 +328,23 @@ h5 {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    @font-face{
+        font-family: VCR;
+        src: url(VCR.ttf);
+    }
+    .unclicked:before {
+        content: 'Press Power';
+        white-space: nowrap;
+        margin-left: 50px;
+        margin-top: 40px;
+        font-family: VCR; 
+        font-size: 20px; 
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.774);
+        border: none;
     }
     .powerlabel{
         display: none;
