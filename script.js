@@ -5,6 +5,8 @@ $(document).ready(function () {
   $("ul").css({ 'display': 'none' })
   $(`.power`).click(function () {
     $("ul").css({ 'display': 'flex' })
+    var audio = new Audio('Theme.mp3');
+    audio.play();
     console.log('hello!')
     $(`.screen`).toggleClass(`unclicked`);
     if ($(`.screen`).hasClass(`unclicked`)) {
@@ -114,7 +116,7 @@ $(document).ready(function () {
   function youLose() {
     $(".modal").toggle(function (e) {
       console.log("you lose");
-      $(".modal-header").append("<h1>You Lose!</h1>");
+      $(".modal-header").append("<h1>You Lose! Unlike Artie, you are not the strongest man!... in the world.</h1>");
       let dataModal = $(this).attr("data-modal");
       $("#" + dataModal).css({ "display": "block" });
     });
