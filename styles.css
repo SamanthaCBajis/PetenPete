@@ -351,6 +351,7 @@ h1 {
         height: 150px;
         background-color: rgb(61, 61, 61);
         border-radius: 50%;
+        color: darkred;
     }
     .power, .reset {
      transform: rotate(0deg);
