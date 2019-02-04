@@ -73,7 +73,7 @@ $(document).ready(function () {
       }
 
       const checkWin = () => {
-        if (matches === 1) {
+        if (matches === 8) {
           youWin();
           clearInterval(timer);
         }
